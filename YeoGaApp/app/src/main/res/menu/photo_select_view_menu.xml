@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menu_images"
+        android:orderInCategory="100"
+        android:showAsAction="always"
+        android:title="앨범"/>
+
+    <item
+        android:id="@+id/menu_camera"
+        android:orderInCategory="101"
+        android:showAsAction="always"
+        android:title="카메라"/>
+
+    <item
+        android:id="@+id/menu_camera_full"
+        android:orderInCategory="102"
+        android:showAsAction="always"
+        android:title="카메라(원본)"/>
+
+</menu>

@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".Route.FindRoute">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/linearLayout">
+
+        <!--
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/rb_layout">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/OnlyDeparture"
+                android:layout_alignParentTop="true"
+                android:text="출발지만 설정"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/DepartureAndDestination"
+                android:layout_alignParentTop="true"
+                android:layout_below="@+id/OnlyDeparture"
+                android:text="출발지 + 목적지 설정"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/Three"
+                android:layout_alignParentTop="true"
+                android:layout_below="@+id/DepartureAndDestination"
+                android:text="출발지 + 경유지 + 목적지 설정"/>
+        </RadioGroup>
+-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/et_layout"
+        android:layout_centerInParent="true"
+        android:layout_below="@+id/rb_layout">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/DepartureLayout"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text = "출발지 : "/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint = "     출발지를 입력하세요.     "
+                android:id="@+id/et_departure"/>
+
+            <!--
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/searchButton1"
+                android:text="조회"/>
+                -->
+        </LinearLayout>
+<!--
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/secondLayout"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text = "경유지 : "/>
+
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint = "     경유지를 입력하세요.     "
+                android:id="@+id/et_stopover"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/searchButton2"
+                android:text="조회"/>
+        </LinearLayout>
+-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/thirdLayout"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text = "목적지 : "/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint = "     목적지를 입력하세요.     "
+                android:id="@+id/et_destination"/>
+            <!--
+           <Button
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:id="@+id/searchButton3"
+               android:text="조회"/>
+               -->
+       </LinearLayout>
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:layout_below="@+id/thirdLayout"
+           android:orientation="vertical">
+
+           <Button
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="검색"
+               android:id="@+id/search"/>
+
+       </LinearLayout>
+
+   </LinearLayout>
+
+
+       <RelativeLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:paddingTop="50dp"
+           android:orientation="vertical"
+           android:id="@+id/foundLayout">
+
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text = "3개의 경로를 찾았습니다!"
+               android:textColor="@android:color/holo_red_light"
+               android:id="@+id/howManyFound"
+               android:layout_centerHorizontal="true" />
+
+           <Button
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_below="@+id/howManyFound"
+               android:id="@+id/FoundButton1"
+               android:text = "경로 1"/>
+
+           <Button
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_below="@+id/FoundButton1"
+               android:id="@+id/FoundButton2"
+               android:text = "경로 2"/>
+
+           <Button
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_below="@+id/FoundButton2"
+               android:id="@+id/FoundButton3"
+               android:text = "경로 3"/>
+
+       </RelativeLayout>
+
+
+   </LinearLayout>
+
+
+   <Button
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:text="메인으로"
+       android:id="@+id/gotomain"
+       android:layout_alignParentBottom="true"
+       android:layout_alignParentLeft="true"
+       android:layout_alignParentStart="true"
+       android:layout_gravity="center_horizontal" />
+
+
+</RelativeLayout>
